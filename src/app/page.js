@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 
-import Form from "/Users/agnivabanerjee/Documents/new_React_Tuts/reactproject/todoapp/src/components/Form";
-import Header from "/Users/agnivabanerjee/Documents/new_React_Tuts/reactproject/todoapp/src/components/Header";
-import TODOHero from "/Users/agnivabanerjee/Documents/new_React_Tuts/reactproject/todoapp/src/components/TODOHero";
-import TODOList from "/Users/agnivabanerjee/Documents/new_React_Tuts/reactproject/todoapp/src/components/TODOList";
+import Form from "./src/components/Form";
+import Header from "./src/components/Header";
+import TODOHero from "./src/components/TODOHero";
+import TODOList from "./src/components/TODOList";
 
 function Home() {
   const [todos, setTodos] = React.useState([]);
