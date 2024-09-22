@@ -1,7 +1,2 @@
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+nvm use 18
+npm run dev 
