@@ -45,7 +45,8 @@ button {
   flex-direction: column;
   width: 70%;
 }
-@media (max-width: 510px) {
+
+@media (max-width: 768px) {
   .wrapper {
     width: 100%;
   }
@@ -74,7 +75,7 @@ header {
   border-radius: 11px;
 }
 .todohero_section div:last-child {
-  background-color: #88ab33;
+  background-color: #ff0000; /* Change to red */
   width: 150px;
   height: 150px;
   border-radius: 75px;
@@ -111,7 +112,7 @@ header {
   width: 10%;
   height: 50px;
   border-radius: 11px;
-  background-color: #88ab33;
+  background-color: #ff0000; /* Change to red */
   border: none;
 }
 
@@ -134,7 +135,7 @@ header {
   height: 70px;
   width: 100%;
   max-width: 455px;
-  border: 1px solid #c2b39a;
+  border: 1px solid #ff0000; /* Change border to red */
   font-size: 16px;
   background-color: #0d0d0d;
   color: #fff;
@@ -170,5 +171,5 @@ header {
 }
 
 .todo_items_right button svg {
-  fill: #c2b39a;
+  fill: #ff0000; /* Change to red */
 }
