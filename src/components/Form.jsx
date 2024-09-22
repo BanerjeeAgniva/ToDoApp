@@ -2,19 +2,24 @@ function Form({ todos, setTodos }) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const value = event.target.todo.value;
+    const value = event.target.todo.value.trim();
+    if (!value) return; // Prevent submission of empty todos
+
     const newTodo = {
       title: value,
-      id: self.crypto.randomUUID(),
+      id: crypto.randomUUID(), // No need for `self`
       is_completed: false,
     };
 
     // Update todo state
-    setTodos((prevTodos) => [...prevTodos, newTodo]);
+    setTodos((prevTodos) => {
+      const updatedTodos = [...prevTodos, newTodo];
+      
+      // Store updated todo list in local storage
+      localStorage.setItem("todos", JSON.stringify(updatedTodos));
 
-    // Store updated todo list in local storage
-    const updatedTodoList = JSON.stringify([...todos, newTodo]);
-    localStorage.setItem("todos", updatedTodoList);
+      return updatedTodos;
+    });
 
     event.target.reset();
   };
